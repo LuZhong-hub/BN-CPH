@@ -53,7 +53,7 @@ var <- unique(UniVar$Var)
 ###################################################
 # LASSO
 
-x=data.matrix(train[,setdiff(var,vardrop)])
+
 x=data.matrix(train[,var])
 y=as.double(train[,2])
 status=as.double(train[,1])
@@ -84,7 +84,7 @@ cuttime <- 365*t
 b <- which(abs(H0$time-cuttime)==min(abs(H0$time-cuttime)))
 s0<-exp(-H0[b,1])
 cases$prob_surv3y<-s0^exp(pre1)
-cases$prob_surv180days<-s0^exp(pre1)
+
 
 
 # Structure learning: Building networks from variables filtered by single factors
